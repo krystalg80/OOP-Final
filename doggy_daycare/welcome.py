@@ -7,11 +7,14 @@ class Welcome:
     
     
     def welcome_customer(self, customer):
-        print(f"{self.welcome_message}, {customer.name}! We are happy to invite you and your dogs!, Your assigned Trainer of the Day is {customer.employee_assigned.name}")
+        print(f"{self.welcome_message}, {customer.name}! We are happy to invite you and your dog(s)!, Your assigned Trainer of the Day is {customer.employee_assigned.name}")
                 
         pickup_time = self.get_pickup_time(customer.session_duration)
+        payment_amount = customer.payment_amount
+
+        
         print(f"Today's session will last {customer.session_duration} hours, and you can pick up your dog at {pickup_time}.")
-    
+        print(f"Your payment amount is: ${payment_amount}")
     
     
     

@@ -34,6 +34,12 @@ customer.session_duration = session_duration
 pickup_time = input("Choose the pickup time (e.g., 2:00 PM): ")
 customer.set_pickup_time(pickup_time)
 
+# Calculate the payment amount based on the chosen duration
+customer.calculate_payment_amount()
+
+# Display payment information
+customer.display_payment_information()
+
 
 print(f"\nCustomer Information:")
 print(f"Name: {customer.name}")
@@ -44,7 +50,6 @@ print(f"Name: {customer.employee_assigned.name}")
 
 for employee in employees:
     print(f"\nEmployee Information for {employee.name}:")
-    print(f"Email: {employee.email}")
     print(f"Phone Number: {employee.phone_number}")
 
 print(f"\nDog Information:")
